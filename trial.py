@@ -1,10 +1,13 @@
 a = [1,4,5,9,10,2,3]
 interval = 0
+minimum = 0git
+maximum = 0
 
-for i in range(len(a)):
-    for j in range(len(a)):
-        diff = abs(a[i]-a[j])
-        if diff > interval:
-            interval = diff
+for i in range (len(a)):
+    if a[i] < minimum:
+        minimum = a[i]
+    if a[i] > maximum:
+        maximum = a[i]
+interval = maximum -minimum
 
 print(interval)
